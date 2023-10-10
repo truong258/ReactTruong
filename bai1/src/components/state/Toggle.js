@@ -1,13 +1,16 @@
 //stateless functional component: component nhung khong su dung state
 //statefull functional component: component co su dung state
 
-import React from "react";
+import React, { useState } from "react";
 
 function Toggle() {
-  <div className="toggle"></div>;
-}
+  //enable state: useState(...)
+  // initial state: useState(false)
+  //reading state
+  //update state
 
-function Toggle2() {
+  const array = useState(false);
+  console.log(array);
   return <div className="toggle"></div>;
 }
 
