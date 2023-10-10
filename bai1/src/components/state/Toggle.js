@@ -15,16 +15,16 @@ function Toggle() {
 
   //state change: component re-render cập nhật dom
   const [on, setOn] = useState(false);
-  console.log(on);
+  //console.log(on);
+  const handleToggle = () => {
+    setOn((on) => !on);
+  };
   return (
     <div>
-      <div
-        className={`toggle ${on ? "active" : ""}`}
-        onClick={() => setOn(true)}
-      >
+      <div className={`toggle ${on ? "active" : ""}`} onClick={handleToggle}>
         <div className={`spinner ${on ? "active" : ""}`}></div>
       </div>
-      {on ? "On" : "Off"}
+      {/* {on ? "On" : "Off"}
       <div className="toggle-control">
         <div className="toggle-on" onClick={() => setOn(true)}>
           On
@@ -32,7 +32,7 @@ function Toggle() {
         <div className="toggle-on" onClick={() => setOn(false)}>
           Off
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

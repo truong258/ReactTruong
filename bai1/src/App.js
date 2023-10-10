@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Toggle from "./components/state/Toggle";
+import Counter from "./components/counter/Counter";
 
 //JSX: JavaScrip XML
 //ES6
@@ -30,6 +31,7 @@ function App() {
   return (
     <div>
       <Toggle></Toggle>
+      <Counter></Counter>
     </div>
   );
 }
