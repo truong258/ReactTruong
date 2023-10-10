@@ -2,6 +2,7 @@
 //statefull functional component: component co su dung state
 
 import React, { useState } from "react";
+import "./ToggleStyle.css";
 
 function Toggle() {
   //enable state: useState(...)
@@ -16,8 +17,22 @@ function Toggle() {
   const [on, setOn] = useState(false);
   console.log(on);
   return (
-    <div className="toggle" onClick={() => setOn(true)}>
-      Toggle {on ? "On" : "Off"}
+    <div>
+      <div
+        className={`toggle ${on ? "active" : ""}`}
+        onClick={() => setOn(true)}
+      >
+        <div className={`spinner ${on ? "active" : ""}`}></div>
+      </div>
+      {on ? "On" : "Off"}
+      <div className="toggle-control">
+        <div className="toggle-on" onClick={() => setOn(true)}>
+          On
+        </div>
+        <div className="toggle-on" onClick={() => setOn(false)}>
+          Off
+        </div>
+      </div>
     </div>
   );
 }
