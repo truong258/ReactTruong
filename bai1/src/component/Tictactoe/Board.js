@@ -2,17 +2,22 @@ import React from "react";
 import Cell from "./Cell";
 import { calcalaterWiner } from "../../helper";
 
-const Board = () => {
-  const cells = [null, null, null, "X", "X", "X", null, null, null];
-  console.log(calcalaterWiner(cells));
+const Board = (props) => {
+  //   const cells = [null, null, null, "X", "X", "X", null, null, null];
+  //   console.log(calcalaterWiner(cells));
+  console.log(props);
 
   return (
     <div className="game-board">
-      {Array(9)
-        .fill()
-        .map((item, index) => (
-          <Cell></Cell>
-        ))}
+      {props.cells.map((item, index) => (
+        <Cell
+          key={index}
+          value={item}
+          onClick={() => {
+            props.onClick(index);
+          }}
+        ></Cell>
+      ))}
     </div>
   );
 };
