@@ -29,7 +29,7 @@ function App() {
   return (
     <div>
       <Button>primary</Button>
-      <Button className="button--secondary">Secondary</Button>
+      <Button secondary>Secondary</Button>
     </div>
   );
 }
