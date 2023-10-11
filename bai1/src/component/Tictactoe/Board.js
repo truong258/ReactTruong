@@ -1,11 +1,11 @@
 import React from "react";
 import Cell from "./Cell";
-import { calcalaterWiner } from "../../helper";
+//import { calcalaterWiner } from "../../helper";
 
 const Board = (props) => {
   //   const cells = [null, null, null, "X", "X", "X", null, null, null];
   //   console.log(calcalaterWiner(cells));
-  console.log(props);
+  //console.log(props);
 
   return (
     <div className="game-board">
@@ -13,9 +13,7 @@ const Board = (props) => {
         <Cell
           key={index}
           value={item}
-          onClick={() => {
-            props.onClick(index);
-          }}
+          onClick={() => props.onClick(index)}
         ></Cell>
       ))}
     </div>

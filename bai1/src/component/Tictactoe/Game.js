@@ -6,10 +6,21 @@ const Game = () => {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNet] = useState(true);
   const winner = calcalaterWiner(board);
-  const handleClick = () => {};
+  const handleClick = (index) => {
+    const boardCopy = [...board];
+    if (winner || boardCopy[index]) return;
+
+    boardCopy[index] = xIsNext ? "X" : "O";
+    setBoard(boardCopy);
+    setXIsNet((xIsNext) => !xIsNext);
+  };
+  const handleResetGame = () => {
+    setBoard(Array(9).fill(null));
+  };
   return (
     <div>
-      <Board cells={board} onclick={handleClick}></Board>
+      <Board cells={board} onClick={handleClick}></Board>
+      <button onClick={handleResetGame}>ResetGame</button>
     </div>
   );
 };
