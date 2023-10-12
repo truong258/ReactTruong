@@ -1,5 +1,6 @@
 import "./App.css";
-import Button from "./component/button/Button";
+
+import Card from "./component/card/Card";
 
 //JSX: JavaScrip XML
 //ES6
@@ -28,8 +29,7 @@ import Button from "./component/button/Button";
 function App() {
   return (
     <div>
-      <Button>primary</Button>
-      <Button secondary>Secondary</Button>
+      <Card></Card>
     </div>
   );
 }
