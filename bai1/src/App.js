@@ -1,6 +1,6 @@
 import "./App.css";
+import Card2 from "./component/card/Card2";
 
-import Card from "./component/card/Card";
 import CardList from "./component/card/CardList";
 
 //JSX: JavaScrip XML
@@ -31,12 +31,7 @@ function App() {
   return (
     <div>
       <CardList>
-        <Card secondary={true}></Card>
-        <Card fontSize="25px"></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        <Card2 secondary={true}></Card2>
       </CardList>
     </div>
   );
