@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 600px;
+  height: 500px;
   background-color: #f5dcdc;
+  /* padding: 10px; */
+  width: 400px;
 `;
 
 const Area = styled.div`
@@ -14,7 +16,7 @@ const Area = styled.div`
 const StyledCard = styled.div`
   position: relative;
   width: 400px;
-  padding: 25px;
+  /* padding: 25px; */
 `;
 const CardImage = styled.div`
   height: 400px;
@@ -90,6 +92,12 @@ const CardAmount = styled.span`
   -webkit-background-clip: text;
   color: transparent;
 `;
+const CardMeta = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+`;
 
 const Card = () => {
   return (
@@ -111,7 +119,10 @@ const Card = () => {
                 />
                 <UserName>@zndrson</UserName>
               </CardUser>
-              <div>256</div>
+              <CardMeta>
+                <img src="/heart-icon.svg" alt="" />
+                <span>256</span>
+              </CardMeta>
             </CardTop>
             <CardFooter>
               <CardTitle>Cosmic Perspective</CardTitle>

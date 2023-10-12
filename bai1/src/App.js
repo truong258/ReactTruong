@@ -1,6 +1,7 @@
 import "./App.css";
 
 import Card from "./component/card/Card";
+import CardList from "./component/card/CardList";
 
 //JSX: JavaScrip XML
 //ES6
@@ -29,12 +30,14 @@ import Card from "./component/card/Card";
 function App() {
   return (
     <div>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
+      <CardList>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </CardList>
     </div>
   );
 }
