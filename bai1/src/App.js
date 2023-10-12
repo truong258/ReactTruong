@@ -31,8 +31,8 @@ function App() {
   return (
     <div>
       <CardList>
-        <Card></Card>
-        <Card></Card>
+        <Card secondary={true}></Card>
+        <Card fontSize="25px"></Card>
         <Card></Card>
         <Card></Card>
         <Card></Card>

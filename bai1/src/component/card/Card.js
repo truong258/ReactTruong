@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Container = styled.div`
   height: 500px;
@@ -80,14 +80,29 @@ const CardTitle = styled.h3`
   color: black;
 `;
 const CardAmount = styled.span`
-  font-size: 18px;
+  font-size: ${(props) => props.fontSize || "18px"};
   font-weight: bold;
-  background: linear-gradient(
-    87deg,
-    #7d6aff 1.38%,
-    #ffb86c 64.35%,
-    #fc2872 119.91%
-  );
+
+  ${(props) =>
+    props.secondary &&
+    css`
+      background: linear-gradient(
+        87deg,
+        #2cccff 1.38%,
+        #eee 64.35%,
+        #fc2872 119.91%
+      );
+    `};
+  ${(props) =>
+    !props.secondary &&
+    css`
+      background: linear-gradient(
+        87deg,
+        #7d6aff 1.38%,
+        #ffb86c 64.35%,
+        #fc2872 119.91%
+      );
+    `};
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -99,7 +114,7 @@ const CardMeta = styled.div`
   gap: 12px;
 `;
 
-const Card = () => {
+const Card = (props) => {
   return (
     <Container>
       <Area>
@@ -126,7 +141,9 @@ const Card = () => {
             </CardTop>
             <CardFooter>
               <CardTitle>Cosmic Perspective</CardTitle>
-              <CardAmount>12,000 PSL</CardAmount>
+              <CardAmount secondary={props.secondary} fontSize={props.fontSize}>
+                12,000 PSL
+              </CardAmount>
             </CardFooter>
           </CardContent>
         </StyledCard>
