@@ -1,7 +1,9 @@
 import "./App.css";
+import { GlobalClass } from "./GlobalClass";
 import Card2 from "./component/card/Card2";
 
 import CardList from "./component/card/CardList";
+import { ThemeProvider } from "styled-components";
 
 //JSX: JavaScrip XML
 //ES6
@@ -26,14 +28,20 @@ import CardList from "./component/card/CardList";
  *mai 10/10 hoc tiep
  * })
  */
+const theme = {
+  color: {
+    blue: "#2979ff",
+  },
+  orange: "#ffa400",
+};
 
 function App() {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <CardList>
         <Card2 secondary={true}></Card2>
       </CardList>
-    </div>
+    </ThemeProvider>
   );
 }
 
