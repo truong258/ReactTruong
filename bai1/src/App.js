@@ -4,6 +4,7 @@ import Card2 from "./component/card/Card2";
 
 import CardList from "./component/card/CardList";
 import { ThemeProvider } from "styled-components";
+import CardTailWind from "./component/card/CardTailWind";
 
 //JSX: JavaScrip XML
 //ES6
@@ -38,17 +39,22 @@ import { ThemeProvider } from "styled-components";
 function App() {
   return (
     // <ThemeProvider theme={theme}>
-    //   <CardList>
-    //     <Card2 secondary={true}></Card2>
-    //   </CardList>
-    <div className="text-center text-lg text-[ffa400]">
-      <div className="container mx-auto bg-gray-300 rounded-xl shadow border p-8 m-20">
-        <p className="mb-5">Hello user Truong!</p>
-        <p className="text-gray-500 text-md">
-          This is an example of using the Tailwind CSS framework with React
-        </p>
-      </div>
+    <div>
+      <CardList>
+        <CardTailWind></CardTailWind>
+      </CardList>
     </div>
+    // <div>
+    //   <div className="container mx-auto bg-gray-300 rounded-xl shadow border p-8 m-20">
+    //     <p className="mb-5">Hello user Truong!</p>
+    //     <p className="text-gray-500 text-md">
+    //       This is an example of using the Tailwind CSS framework with React
+    //     </p>
+    //   </div>
+    //   <div className="text-center text-lg text-[#ffa400]">
+    //     This is my coding
+    //   </div>
+    // </div>
     // </ThemeProvider>
   );
 }
